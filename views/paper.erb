@@ -1,0 +1,20 @@
+<!-- /views/paper.erb -->
+<h2>
+    We played paper!
+  </h2>
+
+ <h2>
+    <% @play.each do |an_rps| %>
+        <%= "They played #{an_rps}!"%>
+    </h2>
+
+<h2>
+  <% if an_rps == "paper" %>
+    <%= pp "We tied!" %>
+  <% elsif an_rps == "rock" %>
+    <%= pp "We won!" %>
+  <% else %>
+    <%= pp "We lost!" %>
+    <% end %>
+    <% end %>
+  </h2>
